@@ -1,0 +1,22 @@
+cff-version: 1.2.0
+message: "Please cite the paper when using this formalization."
+title: "Narrow DNF approximation in Lean"
+type: software
+version: 0.1.0
+license: Apache-2.0
+authors:
+  - family-names: Liu
+    given-names: Chenghua
+  - family-names: Meng
+    given-names: Boning
+preferred-citation:
+  type: article
+  title: "Bounded Relative Boundary Implies Narrow DNF Approximation"
+  authors:
+    - family-names: Liu
+      given-names: Chenghua
+    - family-names: Meng
+      given-names: Boning
+  year: 2026
+  doi: "10.48550/arXiv.2609.00240"
+  url: "https://arxiv.org/abs/2609.00240v1"

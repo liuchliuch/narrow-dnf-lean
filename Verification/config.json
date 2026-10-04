@@ -1,0 +1,11 @@
+{
+  "challenge_module": "Verification.Challenge",
+  "solution_module": "Verification.Solution",
+  "theorem_names": [
+    "NarrowDNF.Verification.theorem_1_2",
+    "NarrowDNF.Verification.lemma_2_1",
+    "NarrowDNF.Verification.conjecture_1_1"
+  ],
+  "permitted_axioms": ["propext", "Quot.sound", "Classical.choice"],
+  "enable_nanoda": false
+}
