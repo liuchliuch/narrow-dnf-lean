@@ -57,4 +57,12 @@ SHIM
   export PATH="$shim_dir:$PATH"
 fi
 
+if [[ "$mode" == sandboxed ]]; then
+  export LANDRUN_EXECUTABLE="$(command -v landrun)"
+  runner_dir="$PWD/.lake/comparator-tools/sandbox-bin"
+  mkdir -p "$runner_dir"
+  ln -sf "$PWD/scripts/landrun-runner.sh" "$runner_dir/landrun"
+  export PATH="$runner_dir:$PATH"
+fi
+
 lake env "$comparator_dir/.lake/build/bin/comparator" Verification/config.json

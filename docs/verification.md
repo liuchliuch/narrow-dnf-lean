@@ -77,3 +77,8 @@ of the translation from informal mathematics. Review the challenge, its model,
 and [paper correspondence](paper-correspondence.md) to assess that translation.
 The supporting numbered statements are checked by the full library build and
 axiom audit; comparator targets the three headline results.
+
+The Linux launcher inserts a command boundary before invoking the pinned real
+Landrun binary. This preserves lean4export's own `--` delimiter with Landrun's
+CLI parser. All sandbox permissions and the mathematical statement interfaces
+are unchanged. Local development mode remains explicitly unsandboxed.
