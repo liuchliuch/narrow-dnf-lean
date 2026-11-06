@@ -1,6 +1,6 @@
 import NarrowDNF.Paper
 
-/-! Proofs of the separately reviewed paper statements.
+/-! Proofs of the separately reviewed 2026-11-06 STOC paper statements.
 This file does not import the challenge or its independent model. -/
 noncomputable section
 namespace NarrowDNF.Verification

@@ -5,7 +5,7 @@ import NarrowDNF.ProductMeasure
 # Randomized coordinate shifting under the biased product measure
 
 This file proves the full error inequality of Lemma 3.1 and the iterated
-expectation inequality (8) in arXiv:2609.00240v1. Random choices form an
+expectation inequality following Lemma 3.1 in the 2026-11-06 STOC revision. Random choices form an
 explicit Bernoulli product cube; the independence needed by iteration is
 derived from the finite-sum Fubini formula.
 -/

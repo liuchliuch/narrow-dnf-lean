@@ -5,7 +5,7 @@ namespace NarrowDNF
 namespace Activation
 variable {ι : Type*} [Fintype ι] [DecidableEq ι]
 
-/-- Lemma 4.1 of arXiv:2609.00240v1, including its exact explicit DNF,
+/-- Lemma 4.1 of the 2026-11-06 STOC revision, including its exact explicit DNF,
 pointwise domination and both probability bounds. The closed bias interval
 strengthens the paper's ambient interior-bias convention. -/
 theorem certificates_and_truncation {J : Activation ι} (hJ : J.Increasing)

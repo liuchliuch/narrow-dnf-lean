@@ -1,0 +1,153 @@
+BUILD NarrowDNF.Adaptive
+Build completed successfully (677 jobs).
+BUILD NarrowDNF.Certificates
+Build completed successfully (678 jobs).
+BUILD NarrowDNF.ProductMeasure
+✔ [958/958] Built NarrowDNF.ProductMeasure (11s)
+Build completed successfully (958 jobs).
+BUILD NarrowDNF.ActivationLoad
+✔ [961/961] Built NarrowDNF.ActivationLoad (12s)
+Build completed successfully (961 jobs).
+BUILD NarrowDNF.FiberShift
+✔ [807/807] Built NarrowDNF.FiberShift (7.6s)
+Build completed successfully (807 jobs).
+BUILD NarrowDNF.CoordinateShift
+✔ [908/908] Built NarrowDNF.CoordinateShift (4.4s)
+Build completed successfully (908 jobs).
+BUILD NarrowDNF.AdaptiveShift
+✔ [909/909] Built NarrowDNF.AdaptiveShift (3.7s)
+Build completed successfully (909 jobs).
+BUILD NarrowDNF.LoadTransport
+✔ [969/969] Built NarrowDNF.LoadTransport (13s)
+Build completed successfully (969 jobs).
+BUILD NarrowDNF.ShiftProbability
+✔ [962/962] Built NarrowDNF.ShiftProbability (4.8s)
+Build completed successfully (962 jobs).
+BUILD NarrowDNF.Weighted
+✔ [942/942] Built NarrowDNF.Weighted (6.8s)
+Build completed successfully (942 jobs).
+BUILD NarrowDNF.ControlledMonotonicization
+✔ [972/972] Built NarrowDNF.ControlledMonotonicization (6.1s)
+Build completed successfully (972 jobs).
+BUILD NarrowDNF.CertificateBounds
+✔ [945/945] Built NarrowDNF.CertificateBounds (4.8s)
+Build completed successfully (945 jobs).
+BUILD NarrowDNF.PaperCertificates
+✔ [967/967] Built NarrowDNF.PaperCertificates (4.2s)
+Build completed successfully (967 jobs).
+BUILD NarrowDNF.Influence
+✔ [960/960] Built NarrowDNF.Influence (7.3s)
+Build completed successfully (960 jobs).
+BUILD NarrowDNF.MinimalElements
+Build completed successfully (679 jobs).
+BUILD NarrowDNF.MainStatements
+✔ [1821/1821] Built NarrowDNF.MainStatements (9.5s)
+Build completed successfully (1821 jobs).
+BUILD NarrowDNF.AdaptiveApproximation
+✔ [1832/1832] Built NarrowDNF.AdaptiveApproximation (10s)
+Build completed successfully (1832 jobs).
+BUILD NarrowDNF.Fourier
+✔ [1892/1892] Built NarrowDNF.Fourier (9.7s)
+Build completed successfully (1892 jobs).
+BUILD NarrowDNF.ConstantApproximation
+✔ [1894/1894] Built NarrowDNF.ConstantApproximation (6.3s)
+Build completed successfully (1894 jobs).
+BUILD NarrowDNF.CompactNormalization
+✔ [961/961] Built NarrowDNF.CompactNormalization (5.9s)
+Build completed successfully (961 jobs).
+BUILD NarrowDNF.Junta
+✔ [1827/1827] Built NarrowDNF.Junta (6.2s)
+Build completed successfully (1827 jobs).
+BUILD NarrowDNF.AllBiasReduction
+✔ [1996/1996] Built NarrowDNF.AllBiasReduction (9.7s)
+Build completed successfully (1996 jobs).
+BUILD NarrowDNF.ConditionalExpectation
+✔ [966/966] Built NarrowDNF.ConditionalExpectation (8.3s)
+Build completed successfully (966 jobs).
+BUILD NarrowDNF.BourgainDuality
+Build completed successfully (1931 jobs).
+BUILD NarrowDNF.BourgainNoise
+✔ [2060/2060] Built NarrowDNF.BourgainNoise (12s)
+Build completed successfully (2060 jobs).
+BUILD NarrowDNF.UniformHypercontractivity
+✔ [2062/2062] Built NarrowDNF.UniformHypercontractivity (20s)
+Build completed successfully (2062 jobs).
+BUILD NarrowDNF.BiasedHypercontractivity
+✔ [2063/2063] Built NarrowDNF.BiasedHypercontractivity (10s)
+Build completed successfully (2063 jobs).
+BUILD NarrowDNF.JuntaCounting
+Build completed successfully (945 jobs).
+BUILD NarrowDNF.BiasedFriedgut
+✔ [2078/2078] Built NarrowDNF.BiasedFriedgut (9.1s)
+Build completed successfully (2078 jobs).
+BUILD NarrowDNF.BourgainComponents
+✔ [1893/1893] Built NarrowDNF.BourgainComponents (6.4s)
+Build completed successfully (1893 jobs).
+BUILD NarrowDNF.BourgainSquareFunction
+✔ [2064/2064] Built NarrowDNF.BourgainSquareFunction (6.5s)
+Build completed successfully (2064 jobs).
+BUILD NarrowDNF.BourgainIntegration
+✔ [2052/2052] Built NarrowDNF.BourgainIntegration (7.9s)
+Build completed successfully (2052 jobs).
+BUILD NarrowDNF.BourgainParameters
+Build completed successfully (1897 jobs).
+BUILD NarrowDNF.HatamiParameters
+Build completed successfully (1897 jobs).
+BUILD NarrowDNF.HatamiActivation
+✔ [3099/3099] Built NarrowDNF.HatamiActivation (17s)
+Build completed successfully (3099 jobs).
+BUILD NarrowDNF.FourierTruncation
+✔ [3101/3101] Built NarrowDNF.FourierTruncation (7.9s)
+Build completed successfully (3101 jobs).
+BUILD NarrowDNF.BourgainRealCutoff
+✔ [3103/3103] Built NarrowDNF.BourgainRealCutoff (9.7s)
+Build completed successfully (3103 jobs).
+BUILD NarrowDNF.BourgainEstimate
+✔ [3110/3110] Built NarrowDNF.BourgainEstimate (8.8s)
+Build completed successfully (3110 jobs).
+BUILD NarrowDNF.CanonicalDNF
+✔ [1822/1822] Built NarrowDNF.CanonicalDNF (4.9s)
+Build completed successfully (1822 jobs).
+BUILD NarrowDNF.ConditionalIndependence
+✔ [967/967] Built NarrowDNF.ConditionalIndependence (3.8s)
+Build completed successfully (967 jobs).
+BUILD NarrowDNF.DecoderObstruction
+✔ [938/938] Built NarrowDNF.DecoderObstruction (25s)
+Build completed successfully (938 jobs).
+BUILD NarrowDNF.HatamiCoefficientCounterexample
+Build completed successfully (1403 jobs).
+BUILD NarrowDNF.HatamiResidual
+✔ [3101/3101] Built NarrowDNF.HatamiResidual (16s)
+Build completed successfully (3101 jobs).
+BUILD NarrowDNF.RankGrouping
+✔ [959/959] Built NarrowDNF.RankGrouping (4.2s)
+Build completed successfully (959 jobs).
+BUILD NarrowDNF.ResidualGram
+Build completed successfully (896 jobs).
+BUILD NarrowDNF.HatamiCrossTerms
+✔ [3106/3106] Built NarrowDNF.HatamiCrossTerms (15s)
+Build completed successfully (3106 jobs).
+BUILD NarrowDNF.HatamiInput
+✔ [3118/3118] Built NarrowDNF.HatamiInput (22s)
+Build completed successfully (3118 jobs).
+BUILD NarrowDNF.Russo
+✔ [2022/2022] Built NarrowDNF.Russo (6.4s)
+Build completed successfully (2022 jobs).
+BUILD NarrowDNF.HighBiasObstruction
+✔ [3128/3128] Built NarrowDNF.HighBiasObstruction (19s)
+Build completed successfully (3128 jobs).
+BUILD NarrowDNF.LikelihoodRatio
+✔ [977/977] Built NarrowDNF.LikelihoodRatio (5.3s)
+Build completed successfully (977 jobs).
+BUILD NarrowDNF.WidthBound
+✔ [1816/1816] Built NarrowDNF.WidthBound (17s)
+Build completed successfully (1816 jobs).
+BUILD NarrowDNF.MainReduction
+✔ [1834/1834] Built NarrowDNF.MainReduction (5.8s)
+Build completed successfully (1834 jobs).
+BUILD NarrowDNF.ORExample
+✔ [3133/3133] Built NarrowDNF.ORExample (17s)
+Build completed successfully (3133 jobs).
+BUILD NarrowDNF.Paper
+✔ [3134/3134] Built NarrowDNF.Paper (9.7s)
+Build completed successfully (3134 jobs).

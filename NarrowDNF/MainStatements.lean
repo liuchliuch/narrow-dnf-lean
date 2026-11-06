@@ -4,7 +4,8 @@ import NarrowDNF.MinimalElements
 import Mathlib.Analysis.SpecialFunctions.Exp
 import Mathlib.Algebra.Order.Floor.Ring
 
-/-! Exact formal target propositions for the headline results. These definitions
+/-! Exact formal target propositions for the 2026-11-06 STOC headline results.
+The bundled manuscript is identified in `paper/manifest.json`. These definitions
 are not axioms. Their unconditional proofs are provided in `Paper.lean`. -/
 noncomputable section
 namespace NarrowDNF

@@ -1,0 +1,150 @@
+{
+  "status": "PASS",
+  "source_sha256": "831b1e41f1de90dcc5a7bc75740cd072e1639efba81231607fd09d551c62869e",
+  "numbered_results": {
+    "conj:friedgut": "1.1",
+    "thm:main": "1.2",
+    "lem:hatami-input": "2.1",
+    "lem:shift": "3.1",
+    "lem:closure": "3.2",
+    "rem:adaptive-obstruction": "3.3",
+    "lem:load-transport": "3.4",
+    "thm:controlled-monotonicization": "3.5",
+    "lem:certificates": "4.1",
+    "rem:high-bias-and": "4.2"
+  }
+}
+{
+  "proof_modules": 54,
+  "failures": []
+}
+PASS: 9 pinned dependency commits and URLs
+✔ [3172/3173] Built NarrowDNF (10s)
+Build completed successfully (3173 jobs).
+AUDITED PROJECT MODULES: [NarrowDNF.BourgainDuality,
+ NarrowDNF.BourgainNoise,
+ NarrowDNF.MainStatements,
+ NarrowDNF.Adaptive,
+ NarrowDNF.Junta,
+ NarrowDNF.ProductMeasure,
+ NarrowDNF.ConditionalExpectation,
+ NarrowDNF.HatamiActivation,
+ NarrowDNF.Fourier,
+ NarrowDNF.UniformHypercontractivity,
+ NarrowDNF.CanonicalDNF,
+ NarrowDNF.HatamiCoefficientCounterexample,
+ NarrowDNF.CompactNormalization,
+ NarrowDNF.AdaptiveShift,
+ NarrowDNF.DecoderObstruction,
+ NarrowDNF.Influence,
+ NarrowDNF.HatamiResidual,
+ NarrowDNF.WidthBound,
+ NarrowDNF.ConditionalIndependence,
+ NarrowDNF.HatamiCrossTerms,
+ NarrowDNF.ORExample,
+ NarrowDNF.Russo,
+ NarrowDNF.BourgainComponents,
+ NarrowDNF.CertificateBounds,
+ NarrowDNF.LikelihoodRatio,
+ NarrowDNF.LoadTransport,
+ NarrowDNF.HatamiInput,
+ NarrowDNF.MinimalElements,
+ NarrowDNF.BiasedFriedgut,
+ NarrowDNF.HighBiasObstruction,
+ NarrowDNF.BourgainSquareFunction,
+ NarrowDNF.AllBiasReduction,
+ NarrowDNF.BiasedHypercontractivity,
+ NarrowDNF.CoordinateShift,
+ NarrowDNF.RankGrouping,
+ NarrowDNF.FourierTruncation,
+ NarrowDNF.ConstantApproximation,
+ NarrowDNF.BourgainParameters,
+ NarrowDNF.Certificates,
+ NarrowDNF.ShiftProbability,
+ NarrowDNF.ActivationLoad,
+ NarrowDNF.HatamiParameters,
+ NarrowDNF.JuntaCounting,
+ NarrowDNF.FiberShift,
+ NarrowDNF.Weighted,
+ NarrowDNF.BourgainEstimate,
+ NarrowDNF.ResidualGram,
+ NarrowDNF.BourgainRealCutoff,
+ NarrowDNF.MainReduction,
+ NarrowDNF.Paper,
+ NarrowDNF.BourgainIntegration,
+ NarrowDNF.ControlledMonotonicization,
+ NarrowDNF.PaperCertificates,
+ NarrowDNF.AdaptiveApproximation]
+PASS: origin-complete audit of 1172 project declarations in 54 modules; only propext, Classical.choice, Quot.sound.
+{
+  "status": "PASS",
+  "scope": "finite semantic checks, not a proof",
+  "activation_checks": [
+    {
+      "dimension": 1,
+      "activation_families": 3,
+      "atom_recovery_cases": 3,
+      "universal_decoder_shift_checks": 6
+    },
+    {
+      "dimension": 2,
+      "activation_families": 54,
+      "atom_recovery_cases": 216,
+      "universal_decoder_shift_checks": 216
+    },
+    {
+      "dimension": 3,
+      "activation_families": 116640,
+      "atom_recovery_cases": 1399680,
+      "universal_decoder_shift_checks": 699840
+    }
+  ],
+  "shift_checks": [
+    {
+      "dimension": 1,
+      "functions": 4,
+      "increasing_targets": 3,
+      "exact_error_inequalities": 36
+    },
+    {
+      "dimension": 2,
+      "functions": 16,
+      "increasing_targets": 6,
+      "exact_error_inequalities": 576
+    },
+    {
+      "dimension": 3,
+      "functions": 256,
+      "increasing_targets": 20,
+      "exact_error_inequalities": 46080
+    }
+  ],
+  "forcing_checks": [
+    {
+      "dimension": 1,
+      "exact_mass_and_ratio_checks": 6
+    },
+    {
+      "dimension": 2,
+      "exact_mass_and_ratio_checks": 12
+    },
+    {
+      "dimension": 3,
+      "exact_mass_and_ratio_checks": 24
+    }
+  ],
+  "remark_3_3": {
+    "old_decoder_error": "1/8",
+    "best_increasing_old_decoder_error": "1/4",
+    "lower_shift_equals_target": true
+  },
+  "external_dependency_warning": {
+    "source": "Hatami 2012, Annals p.517 (external dependency)",
+    "function": "XOR of two bits",
+    "bias": "1/10",
+    "coefficient_abs": "9/50",
+    "claimed_upper_bound": "1/10",
+    "conclusion": "auxiliary coefficient bound false; theorem not refuted"
+  },
+  "elapsed_seconds": 12.05
+}

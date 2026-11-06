@@ -1,0 +1,3 @@
+# Preserve the upstream source snapshot byte for byte, including its whitespace.
+paper/Low-Influence-Monotone-Boolean-Functions-STOC-revised.tex -text -whitespace
+paper/Low-Influence-Monotone-Boolean-Functions-STOC-revised.pdf binary

@@ -3,7 +3,8 @@ import Verification.Model
 /-!
 # Paper statements, without their proofs
 
-These three statements are transcribed explicitly from arXiv:2609.00240v1.
+These three statements are transcribed explicitly from the 2026-11-06 STOC
+revision, identified by `paper/manifest.json`. Their formulas agree with v1.
 The three `sorry` bodies are intentional challenge placeholders. This module
 is never imported by the proof library or by Verification.Solution.
 -/

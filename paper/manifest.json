@@ -1,0 +1,34 @@
+{
+  "source_url": "https://www.overleaf.com/project/6ad8d34ce8b959257628193d",
+  "downloaded_utc": "2026-11-06T14:23:17.798488+00:00",
+  "archive_sha256": "cb0f276cf7686ea4244444f247945ce0614ff54030ce8d9ccb3955450e538bc3",
+  "source": {
+    "path": "Low-Influence-Monotone-Boolean-Functions-STOC-revised.tex",
+    "bytes": 44250,
+    "sha256": "831b1e41f1de90dcc5a7bc75740cd072e1639efba81231607fd09d551c62869e"
+  },
+  "historical_arxiv": {
+    "version": "2609.00240v1",
+    "source_sha256": "b7e89e1b5cfe7c290c88863bd695aea49c848f7c056c33c055fa325f32c7fd75",
+    "pdf_sha256": "8bb23d350751f816666ea753a49a11877a9b1f429f8512a0ef08cd49c13b79b3"
+  },
+  "pdf": {
+    "path": "Low-Influence-Monotone-Boolean-Functions-STOC-revised.pdf",
+    "bytes": 371767,
+    "sha256": "8f726a214735b7c0948cb205ec859313c6d76ad3d88140c8366cadaf7770400b",
+    "provenance": "Locally compiled without editing the verified Overleaf source, using pdfTeX (TeX Live 2024).",
+    "pages": 13
+  },
+  "numbered_results": {
+    "conj:friedgut": "1.1",
+    "thm:main": "1.2",
+    "lem:hatami-input": "2.1",
+    "lem:shift": "3.1",
+    "lem:closure": "3.2",
+    "rem:adaptive-obstruction": "3.3",
+    "lem:load-transport": "3.4",
+    "thm:controlled-monotonicization": "3.5",
+    "lem:certificates": "4.1",
+    "rem:high-bias-and": "4.2"
+  }
+}

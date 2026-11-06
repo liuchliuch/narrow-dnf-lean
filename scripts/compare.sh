@@ -2,6 +2,7 @@
 # Run the pinned official comparator against an independent statement model.
 set -euo pipefail
 cd "$(dirname "$0")/.."
+source scripts/environment.sh
 
 mode="sandboxed"
 if [[ "${1:-}" == "--unsandboxed" ]]; then
@@ -17,7 +18,9 @@ if [[ "$mode" == sandboxed ]] && ! command -v landrun >/dev/null; then
   exit 2
 fi
 
+python3 scripts/check_paper.py
 python3 scripts/check_project.py
+python3 scripts/check_dependencies.py
 comparator_rev="97ef939c9fe3f8abf93e4adb654517476da7a66f"
 comparator_dir="${COMPARATOR_HOME:-$PWD/.lake/comparator-tools/comparator}"
 if [[ ! -d "$comparator_dir/.git" ]]; then
@@ -25,6 +28,7 @@ if [[ ! -d "$comparator_dir/.git" ]]; then
   git clone --no-checkout https://github.com/leanprover/comparator.git "$comparator_dir"
   git -C "$comparator_dir" checkout --detach "$comparator_rev"
 fi
+comparator_dir="$(cd "$comparator_dir" && pwd)"
 if [[ "$(git -C "$comparator_dir" rev-parse HEAD)" != "$comparator_rev" ]]; then
   echo 'Comparator checkout does not match the pinned revision.' >&2
   exit 1
@@ -66,3 +70,4 @@ if [[ "$mode" == sandboxed ]]; then
 fi
 
 lake env "$comparator_dir/.lake/build/bin/comparator" Verification/config.json
+python3 scripts/comparator_negative.py "$comparator_dir/.lake/build/bin/comparator"

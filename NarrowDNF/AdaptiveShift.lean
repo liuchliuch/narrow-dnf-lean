@@ -4,7 +4,8 @@ import Mathlib.Data.Finset.Insert
 /-!
 # Adaptive atoms under shifts
 
-The precise content of Lemma 3.2 and Appendix B of arXiv:2609.00240v1.
+The precise content of Lemma 3.2 of the 2026-11-06 STOC revision, including its
+atom-recovery proof (formerly in Appendix B of arXiv:2609.00240v1).
 All activations carry the locality field from `Activation`; no decoder or atom
 recovery oracle is assumed. The unbranched formulas for shifts are equivalent
 to the paper's two-slice formulas by Boolean idempotence.

@@ -24,7 +24,7 @@ theorem lowerCoordinates_cover (order : List ι) (horder : ∀ i, i ∈ order) (
   ext i
   simp [lowerCoordinates_map_choices, horder, forcingCoordinates]
 
-/-- Theorem 3.4 of arXiv:2609.00240v1, with explicit finite random choices,
+/-- Theorem 3.5 of the 2026-11-06 STOC revision, with explicit finite random choices,
 full adaptive measurability, and the zero-load edge case included. -/
 theorem controlled_monotonicization {p : ℝ} (hp0 : 0 < p) (hp1 : p < 1)
     {d : ℕ} {e L : ℝ} (_he0 : 0 ≤ e) (hL0 : 0 ≤ L)

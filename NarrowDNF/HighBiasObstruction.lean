@@ -6,7 +6,7 @@ import Mathlib.Tactic
 /-!
 # The exact high-bias AND obstruction
 
-Appendix B's sequence is retained exactly: `p_n = 1 - 1/n`, with the
+Remark 4.2's sequence is retained exactly: `p_n = 1 - 1/n`, with the
 Boolean AND on `Fin n`. Probabilities and resampling influences refer to
 the finite product definitions used throughout the development.
 -/
@@ -153,7 +153,7 @@ theorem empty_dnf_error (p : ℝ) :
 
 end FiniteCube
 
-/-- The exact sequence in Appendix B, without a reparameterization. -/
+/-- The exact sequence in Remark 4.2, without a reparameterization. -/
 def bias (n : ℕ) : ℝ := 1 - 1 / (n : ℝ)
 
 def andFunction (n : ℕ) : Cube (Fin n) → Bool := andAll

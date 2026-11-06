@@ -9,7 +9,7 @@ import Mathlib.Tactic.Ring
 # Explicit width and error-budget arithmetic
 
 These are the final arithmetic estimates in the proof of Theorem 1.2 of
-arXiv:2609.00240v1. The source's numerical constants are retained. This
+the 2026-11-06 STOC revision. The source's numerical constants are retained. This
 module does not assume or assert the structural theorem supplying the
 approximator and activation family.
 -/

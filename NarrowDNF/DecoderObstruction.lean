@@ -6,7 +6,7 @@ import Mathlib.Tactic.NormNum
 import NarrowDNF.AdaptiveShift
 
 /-!
-# The same-partition obstruction in Appendix B.1
+# The same-partition obstruction in Remark 3.3
 
 Points are the three bits `(b,a₁,a₂)`. The only activation is the full indexing
 set, activated exactly when `b=true`. Its adaptive atom therefore is the empty
@@ -155,7 +155,7 @@ theorem every_increasing_decoder_error (v : Point → Bool)
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 0 in
 /-- If the empty atom is labeled zero, its three accepted target points alone
-already contribute 3/8 error, as stated in Appendix B.1. -/
+already contribute 3/8 error, as stated in Remark 3.3. -/
 theorem empty_atom_zero_error (v : Point → Bool) (hv : Measurable v)
     (hz : v (false, false, false) = false) : (3 / 8 : ℚ) ≤ uniformError v := by
   have h : ∀ v : Point → Bool, Measurable v → v (false, false, false) = false →

@@ -6,7 +6,7 @@ import Mathlib.Tactic.Ring
 # Bias-matched shifts on a Boolean fiber
 
 This file proves the two-point calculation used in Lemma 3.1 of
-arXiv:2609.00240v1. The probability of the upper shift is `1 - p` and the
+the 2026-11-06 STOC revision. The probability of the upper shift is `1 - p` and the
 probability of the lower shift is `p`; the input fiber has the same bias `p`.
 
 The error theorem is a conditional, single-fiber statement. Passing to an

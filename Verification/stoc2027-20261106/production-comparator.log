@@ -1,0 +1,48 @@
+{
+  "status": "PASS",
+  "source_sha256": "831b1e41f1de90dcc5a7bc75740cd072e1639efba81231607fd09d551c62869e",
+  "numbered_results": {
+    "conj:friedgut": "1.1",
+    "thm:main": "1.2",
+    "lem:hatami-input": "2.1",
+    "lem:shift": "3.1",
+    "lem:closure": "3.2",
+    "rem:adaptive-obstruction": "3.3",
+    "lem:load-transport": "3.4",
+    "thm:controlled-monotonicization": "3.5",
+    "lem:certificates": "4.1",
+    "rem:high-bias-and": "4.2"
+  }
+}
+{
+  "proof_modules": 54,
+  "failures": []
+}
+PASS: 9 pinned dependency commits and URLs
+✔ [2/18] Built Comparator.Util (2.7s)
+✔ [5/18] Built Comparator.Axioms (840ms)
+✔ [6/18] Built Comparator.Util:c.o (373ms)
+✔ [10/23] Built Comparator.Axioms:c.o (275ms)
+✔ [11/23] Built Comparator.Compare (1.6s)
+✔ [13/23] Built Comparator.Compare:c.o (362ms)
+✔ [15/23] Built Comparator (370ms)
+✔ [17/23] Built Comparator:c.o (46ms)
+✔ [19/23] Built Main (7.9s)
+✔ [22/23] Built Main:c.o (572ms)
+✔ [23/23] Built comparator:exe (1.5s)
+Build completed successfully (23 jobs).
+UNSANDBOXED: statement comparison, axiom checks and kernel replay remain enabled; process isolation is absent.
+Building Verification.Challenge
+⚠ [1815/1815] Built Verification.Challenge (10s)
+warning: Verification/Challenge.lean:16:8: declaration uses 'sorry'
+warning: Verification/Challenge.lean:26:8: declaration uses 'sorry'
+warning: Verification/Challenge.lean:38:8: declaration uses 'sorry'
+Build completed successfully (1815 jobs).
+Exporting #[NarrowDNF.Verification.theorem_1_2, NarrowDNF.Verification.lemma_2_1, NarrowDNF.Verification.conjecture_1_1, propext, Quot.sound, Classical.choice, Nat.add, Nat.sub, Nat.mul, Nat.pow, Nat.gcd, Nat.div, Nat.mod, Nat.beq, Nat.ble, Nat.land, Nat.lor, Nat.xor, Nat.shiftLeft, Nat.shiftRight] from Verification.Challenge
+Building Verification.Solution
+✔ [3135/3135] Built Verification.Solution (19s)
+Build completed successfully (3135 jobs).
+Exporting #[NarrowDNF.Verification.theorem_1_2, NarrowDNF.Verification.lemma_2_1, NarrowDNF.Verification.conjecture_1_1, propext, Quot.sound, Classical.choice, Nat.add, Nat.sub, Nat.mul, Nat.pow, Nat.gcd, Nat.div, Nat.mod, Nat.beq, Nat.ble, Nat.land, Nat.lor, Nat.xor, Nat.shiftLeft, Nat.shiftRight] from Verification.Solution
+Running Lean default kernel on solution.
+Lean default kernel accepts the solution
+Your solution is okay!

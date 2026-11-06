@@ -5,7 +5,7 @@ import NarrowDNF.FiberShift
 # Coordinate shifts on Boolean functions
 
 The unbranched shift formulas are equivalent to the two-slice definitions in
-equation (7) of arXiv:2609.00240v1, by Boolean idempotence. This file concerns
+the shift definitions preceding Lemma 3.1 of the 2026-11-06 STOC revision, by Boolean idempotence. This file concerns
 monotonicity; the global biased-error bound requires a separate finite-sum
 argument.
 -/

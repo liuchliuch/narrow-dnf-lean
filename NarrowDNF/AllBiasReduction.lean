@@ -1,5 +1,6 @@
 import NarrowDNF.MainStatements
 import NarrowDNF.ConstantApproximation
+import NarrowDNF.CompactNormalization
 import NarrowDNF.Junta
 import Mathlib.Tactic.Linarith
 
@@ -121,9 +122,14 @@ theorem friedgutAllBias_of_lowBias_and_compactJunta
       · simpa only [heval] using hb
     · have hplam : lam ≤ p := by linarith
       have hpupper : p ≤ 1-lam := by linarith
+      have hflip := highBias_totalFlipInfluence_lt (lt_of_not_ge hlowp) hc f hboundary'
       have hIf : totalInfluence p f ≤ c := by
-        have := mul_nonneg (show (0:ℝ) ≤ 2*p-1 by linarith) hc.le
-        nlinarith
+        calc
+          totalInfluence p f ≤ (1 / 2 : ℝ) * totalFlipInfluence p f :=
+            totalInfluence_le_half_totalFlipInfluence hp0.le hp1.le f
+          _ ≤ (1 / 2 : ℝ) * (2 * c) :=
+            mul_le_mul_of_nonneg_left (hflip.1.trans hflip.2.le) (by norm_num)
+          _ = c := by ring
       obtain ⟨J,u,hJ,hu,hlocal,herr⟩ := hM n p hplam hpupper f hf hIf
       obtain ⟨terms,hwidth,heval⟩ := monotone_junta_eq_dnf J hu hlocal
       apply family_of_dnf A p ε (max lowWidth M) terms

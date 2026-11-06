@@ -51,7 +51,7 @@ theorem exists_le_mean [Nonempty α] (weights : α → ℝ)
 
 
 /-- Simultaneously select small error and cost by one weighted average.
-This is the full finite averaging step of Theorem 3.4, including zero budget. -/
+This is the full finite averaging step of Theorem 3.5, including zero budget. -/
 theorem select_two_budgets [Nonempty α] (weights : α → ℝ)
     (hw : ∀ x, 0 < weights x) (hs : ∑ x, weights x = 1)
     (err cost : α → ℝ) (herr : ∀ x, 0 ≤ err x) (hcost : ∀ x, 0 ≤ cost x)

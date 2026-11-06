@@ -20,7 +20,7 @@ theorem weight_eq_hamming (p : ℝ) (x : Cube ι) :
   rw [hf, Finset.card_compl]
   rfl
 
-/-- Exact likelihood-ratio identity used in Lemma 3.3, with division justified
+/-- Exact likelihood-ratio identity used in Lemma 3.4, with division justified
 by full support. -/
 theorem forcing_likelihood_ratio {p : ℝ} (hp0 : 0 < p) (hp1 : p < 1) (x : Cube ι) :
     weight (2*p-p^2) x / weight p x =

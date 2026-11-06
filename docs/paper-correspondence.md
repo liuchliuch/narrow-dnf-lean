@@ -1,17 +1,48 @@
 # Correspondence with the paper
 
 Reference: Chenghua Liu and Boning Meng, *Bounded Relative Boundary Implies
-Narrow DNF Approximation*, [arXiv:2609.00240v1](https://arxiv.org/abs/2609.00240v1),
-submitted August 31, 2026. The official TeX and PDF were downloaded again on
-October 4, 2026 and matched the original source snapshot byte for byte.
+Narrow DNF Approximation*, [arXiv:2609.00240](https://arxiv.org/abs/2609.00240).
+The current target is the authors' STOC revised manuscript, exported from
+[Overleaf](https://www.overleaf.com/project/6ad8d34ce8b959257628193d) at
+`2026-11-06T14:23:17.798488+00:00`. The complete source, including Appendix A,
+is bundled as [TeX](../paper/Low-Influence-Monotone-Boolean-Functions-STOC-revised.tex)
+with a [PDF built from that source](../paper/Low-Influence-Monotone-Boolean-Functions-STOC-revised.pdf).
+The source has 44,250 bytes and SHA-256
+`831b1e41f1de90dcc5a7bc75740cd072e1639efba81231607fd09d551c62869e`.
+[The manifest](../paper/manifest.json) records provenance and artifact hashes.
 
-| Source | SHA-256 |
+The previous release targeted [arXiv v1](https://arxiv.org/abs/2609.00240v1),
+submitted August 31, 2026 and rechecked on October 4, 2026. These historical
+hashes identify the comparison baseline, not the current target or new
+verification evidence:
+
+| Historical source | SHA-256 |
 | --- | --- |
-| `main.tex` from the official source archive | `b7e89e1b5cfe7c290c88863bd695aea49c848f7c056c33c055fa325f32c7fd75` |
-| Official PDF | `8bb23d350751f816666ea753a49a11877a9b1f429f8512a0ef08cd49c13b79b3` |
+| arXiv v1 `main.tex` | `b7e89e1b5cfe7c290c88863bd695aea49c848f7c056c33c055fa325f32c7fd75` |
+| arXiv v1 PDF | `8bb23d350751f816666ea753a49a11877a9b1f429f8512a0ef08cd49c13b79b3` |
 
-The release links to the original paper rather than bundling duplicate PDF,
-HTML, extracted text, source archives or third-party reference books.
+## Changes from arXiv v1
+
+The complete manuscript comparison preserves the definitions, hypotheses,
+quantifier order, width bound, Hatami parameters and conclusions of the three
+headline results. Changes to typography, exposition, references and the AI
+methodology statement are retained in the bundled source. The mathematical
+and structural correspondence is:
+
+| arXiv v1 | STOC revised manuscript | Formalization response |
+| --- | --- | --- |
+| Conjecture 1.1, Theorem 1.2, Lemma 2.1 | Same numbers and statements | Keep the public propositions, unconditional proofs and independent Comparator targets. |
+| Lemma 3.2 with atom-recovery proof in Appendix B | Full atom-recovery proof inside Lemma 3.2 | Existing `AdaptiveShift` proofs retain actual input labels and ordered repeated forcing; `Activation.force_refines` proves the explicit refinement observation. |
+| Remark B.1 | Remark 3.3, with an explicit distinction between general activations and Hatami's uniform-bias construction | Retain the decoder obstruction; add `HatamiActivation.localMass_half`, `HatamiActivation.thresholdActivation_half_constant` and the paper-family specialization `HatamiActivation.paperActivation_half_constant`. |
+| Lemma 3.3 | Lemma 3.4 | Update the load-transport references; the equality and both bounds are unchanged. |
+| Theorem 3.4 | Theorem 3.5 | Update the controlled-monotonicization references; the simultaneous error and cost budgets are unchanged. |
+| Compact-interval normalization in the all-bias proof | Direct `E_p[sensitivity] ≤ c/p < 2c` for `p > 1/2` | Prove `Influence.totalFlipInfluence_le_of_relativeBoundary` and `Influence.highBias_totalFlipInfluence_lt`; use this bound in `AllBiasReduction`. |
+| Remark B.2 | Remark 4.2 | Retain the same high-bias AND sequence and obstruction. |
+| Appendix A | Appendix A | Retain the activation construction, parameters and corrected auxiliary Fourier estimates described below. |
+
+See the [synchronization report](stoc2027-sync.md) for revision-specific checks
+and their results. Historical acceptance evidence is not used as evidence for
+this source snapshot.
 
 ## Numbered results
 
@@ -25,17 +56,19 @@ separate, explicit comparator challenges and an independent definition model.
 | Lemma 2.1 | `hatami_arity_load` | `Paper`, `HatamiInput`, `HatamiActivation` |
 | Lemma 3.1 | `ShiftProbability.one_coordinate_error_le`; `upperShift_coordinateMonotone`; `lowerShift_coordinateMonotone`; `upperShift_preserves_coordinateMonotone`; `lowerShift_preserves_coordinateMonotone` | `FiberShift`, `CoordinateShift`, `ShiftProbability` |
 | Lemma 3.2 | `Activation.measurable_upperShift`; `Activation.measurable_lowerShift`; `Activation.measurable_applyShifts` | `AdaptiveShift` |
-| Lemma 3.3 | `Activation.load_transport`; `Activation.expected_forced_active_le` | `LoadTransport`, `LikelihoodRatio` |
-| Theorem 3.4 | `Activation.controlled_monotonicization` | `ControlledMonotonicization`, `Weighted` |
+| Remark 3.3 | `DecoderObstruction.decoder_error`; `lowerShift_decoder`; `target_not_measurable`; `every_increasing_decoder_error`; `empty_atom_zero_error` (all in `DecoderObstruction`); `HatamiActivation.paperActivation_half_constant` | `DecoderObstruction`, `HatamiActivation` |
+| Lemma 3.4 | `Activation.load_transport`; `Activation.expected_forced_active_le` | `LoadTransport`, `LikelihoodRatio` |
+| Theorem 3.5 | `Activation.controlled_monotonicization` | `ControlledMonotonicization`, `Weighted` |
 | Lemma 4.1 | `Activation.certificates_and_truncation` | `Adaptive`, `Certificates`, `CertificateBounds`, `PaperCertificates` |
-| Remark B.1 | `DecoderObstruction.decoder_error`; `lowerShift_decoder`; `target_not_measurable`; `every_increasing_decoder_error`; `empty_atom_zero_error` (all in `DecoderObstruction`) | `DecoderObstruction` |
-| Remark B.2 | `HighBiasObstruction.andFunction_totalInfluence_tendsto`; `andFunction_relativeBoundary_tendsto_atTop`; `eventually_every_dnf_error_gt` (all in `HighBiasObstruction`) | `HighBiasObstruction` |
+| Remark 4.2 | `HighBiasObstruction.andFunction_totalInfluence_tendsto`; `andFunction_relativeBoundary_tendsto_atTop`; `eventually_every_dnf_error_gt` (all in `HighBiasObstruction`) | `HighBiasObstruction` |
 
 Additional source claims include the original `p_n = 1/n` OR example
 (`ORExample.bounded_influence_junta_obstruction`), the Margulis-Russo derivative
-identity (`Russo.totalInfluence_eq_deriv`), the exact compact-bias normalization
-(`Influence.compact_totalFlipInfluence_le`), and the equivalence between bounded
-minimal elements and positive DNF width (`CanonicalDNF`).
+identity (`Russo.totalInfluence_eq_deriv`), the revised direct high-bias
+normalization (`Influence.highBias_totalFlipInfluence_lt`), and the equivalence
+between bounded minimal elements and positive DNF width (`CanonicalDNF`). The older general
+compact-interval normalization `Influence.compact_totalFlipInfluence_le` remains
+available as an auxiliary result.
 
 ## Definitions and quantifiers
 
@@ -91,8 +124,11 @@ The main chain is:
 4. The certificate modules construct a finite positive DNF and bound its
    discarded mass. `MainReduction` and `WidthBound` assemble Theorem 1.2.
 5. `BiasedFriedgut` proves the compact-bias monotone junta theorem;
-   `ConstantApproximation`, `Junta` and `AllBiasReduction` complete the all-bias
-   conclusion. `Paper.lean` supplies unconditional headline wrappers.
+   `ConstantApproximation`, `CompactNormalization`, `Junta` and `AllBiasReduction`
+   complete the all-bias conclusion. The direct bit-flip bound is converted to
+   the resampling convention of the compact junta interface by
+   `Influence.totalInfluence_le_half_totalFlipInfluence`. `Paper.lean` supplies
+   unconditional headline wrappers.
 
 ## Auxiliary source correction
 
@@ -113,7 +149,7 @@ not rely on the printed false auxiliary inequality.
 
 The source review checked the mathematical definitions, headline quantifiers,
 numbered-result statements, dependency assembly, numerical budgets and this
-correction against the original paper. Kernel acceptance and comparator
+correction against both the original paper and the current STOC source snapshot. Kernel acceptance and comparator
 agreement provide the separate mechanical evidence described in
 [verification](verification.md); they do not automate the informal-to-formal
 translation review.

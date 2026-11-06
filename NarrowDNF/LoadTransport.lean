@@ -140,7 +140,7 @@ theorem probability_forced_mean (J : Activation ι) (p : ℝ) (S : Finset ι) :
   rw [expectation_comm]
   exact forcing_expectation p (fun x => if J.fires S x then 1 else 0)
 
-/-- The equality in Lemma 3.3, with a Bernoulli cube encoding the random set D. -/
+/-- The equality in Lemma 3.4, with a Bernoulli cube encoding the random set D. -/
 theorem load_forced_mean (J : Activation ι) (p : ℝ) :
     expectation p (fun d : Cube ι => (J.force (forcingCoordinates d)).load p) =
       J.load (2*p-p^2) := by
@@ -150,7 +150,7 @@ theorem load_forced_mean (J : Activation ι) (p : ℝ) :
   intro S _
   rw [expectation_const_mul, probability_forced_mean]
 
-/-- The exact equality and both upper bounds of Lemma 3.3. -/
+/-- The exact equality and both upper bounds of Lemma 3.4. -/
 theorem load_transport (J : Activation ι) {p : ℝ}
     (hp0 : 0 ≤ p) (hp1 : p ≤ 1) {d : ℕ} (hd : J.ArityLE d) :
     expectation p (fun D : Cube ι => (J.force (forcingCoordinates D)).load p) =
@@ -170,7 +170,7 @@ theorem force_arityLE {J : Activation ι} {d : ℕ} (hd : J.ArityLE d)
   intro S hS x
   exact hd S hS (forceInput D x)
 
-/-- The active-union consequence at the end of Lemma 3.3. -/
+/-- The active-union consequence at the end of Lemma 3.4. -/
 theorem expected_forced_active_le (J : Activation ι) {p : ℝ}
     (hp0 : 0 ≤ p) (hp1 : p ≤ 1) {d : ℕ} (hd : J.ArityLE d) :
     expectation p (fun D : Cube ι => expectation p (fun x =>

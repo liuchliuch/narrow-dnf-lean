@@ -4,10 +4,10 @@ import NarrowDNF.BiasedFriedgut
 import NarrowDNF.AllBiasReduction
 
 /-!
-# Unconditional headline results of Liu–Meng, arXiv:2609.00240v1
+# Unconditional headline results of Liu–Meng, STOC revision of 2026-11-06
 
 Every external input used by these wrappers is proved in this project. The
-Wrappers take no Hatami, Bourgain, junta, or approximation assumption.
+wrappers take no Hatami, Bourgain, junta, or approximation assumption.
 The proposition definitions expose the paper's complete quantifier order.
 -/
 namespace NarrowDNF

@@ -1,0 +1,55 @@
+{
+  "baseline_sha256": "b7e89e1b5cfe7c290c88863bd695aea49c848f7c056c33c055fa325f32c7fd75",
+  "target_sha256": "831b1e41f1de90dcc5a7bc75740cd072e1639efba81231607fd09d551c62869e",
+  "scope": "Whitespace-normalized statement bodies, not automated semantic proof comparison",
+  "statements": [
+    {
+      "label": "conj:friedgut",
+      "unchanged_after_whitespace_normalization": true,
+      "baseline_statement_sha256": "9313e36eb5740924ceddac615bdc8c0b7e9f2d093d0e23348b2f83a86115364a",
+      "target_statement_sha256": "9313e36eb5740924ceddac615bdc8c0b7e9f2d093d0e23348b2f83a86115364a"
+    },
+    {
+      "label": "thm:main",
+      "unchanged_after_whitespace_normalization": true,
+      "baseline_statement_sha256": "dbe10c04a080746c592790c2469ee6f0916733bb284d31a7100e77e9a2e5bf22",
+      "target_statement_sha256": "dbe10c04a080746c592790c2469ee6f0916733bb284d31a7100e77e9a2e5bf22"
+    },
+    {
+      "label": "lem:hatami-input",
+      "unchanged_after_whitespace_normalization": true,
+      "baseline_statement_sha256": "a6f577c70d15baa93ba2518ce6a2ff152968156d91311d5857d492fdbf9293c6",
+      "target_statement_sha256": "a6f577c70d15baa93ba2518ce6a2ff152968156d91311d5857d492fdbf9293c6"
+    },
+    {
+      "label": "lem:shift",
+      "unchanged_after_whitespace_normalization": true,
+      "baseline_statement_sha256": "5e52c0b998836cb30cb52d65b4d744b45eb65856ef8f0df6b0583f2ebc3e45f3",
+      "target_statement_sha256": "5e52c0b998836cb30cb52d65b4d744b45eb65856ef8f0df6b0583f2ebc3e45f3"
+    },
+    {
+      "label": "lem:closure",
+      "unchanged_after_whitespace_normalization": true,
+      "baseline_statement_sha256": "97dbcf91715694ab1259599e72d2c15ae2f1b94dd399b87898da5aa0c3cb5c1d",
+      "target_statement_sha256": "97dbcf91715694ab1259599e72d2c15ae2f1b94dd399b87898da5aa0c3cb5c1d"
+    },
+    {
+      "label": "lem:load-transport",
+      "unchanged_after_whitespace_normalization": true,
+      "baseline_statement_sha256": "c591c4080187bf50092d6d39cda283ff45ef0f282925edae5434c9c1eb0fb96a",
+      "target_statement_sha256": "c591c4080187bf50092d6d39cda283ff45ef0f282925edae5434c9c1eb0fb96a"
+    },
+    {
+      "label": "thm:controlled-monotonicization",
+      "unchanged_after_whitespace_normalization": false,
+      "baseline_statement_sha256": "696490c2ea7a7c6ab6573face1188777c05e056bee365a627f79ac4eb37fc93f",
+      "target_statement_sha256": "64ab2d9c2ca04dbda90a57d4edf95267163172286dd56fd5c2521bb408d331dc"
+    },
+    {
+      "label": "lem:certificates",
+      "unchanged_after_whitespace_normalization": false,
+      "baseline_statement_sha256": "c1e118e0e69f00bb19a0b693f0f21405410cb5b2941cfc02f1130c236c3ce53f",
+      "target_statement_sha256": "14d046ca442cd58fe90fc1eccaabf13a6e56d1ce7f4a8762c253954384b23539"
+    }
+  ]
+}

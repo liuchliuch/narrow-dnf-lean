@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Finite semantic checks for arXiv:2609.00240v1.
+"""Finite semantic checks for the 2026-11-06 STOC revision.
 
 These checks are executable evidence, NOT proofs in Lean. By default all local
 increasing activation families on cubes of dimension at most three are tested.
@@ -80,7 +80,7 @@ def check_activation_families(n: int):
                 lower_expr.append(frozenset((old[x],))
                                   if x & bit else frozenset((old[lo], old[hi])))
                 if x & bit:
-                    # Appendix B R_i: reconstruct active lower sets using only
+                    # Lemma 3.2 R_i: reconstruct active lower sets using only
                     # the upper active union and the recorded true labels.
                     b, a = old[x]
                     lowered_labels = a & ~bit
@@ -93,7 +93,7 @@ def check_activation_families(n: int):
                         assert old[lo] == old[x]
                     recovery_cases += 1
                 b, a = forced[x]
-                assert (b, (a | bit) & b) == old[hi]  # Appendix B Q_i.
+                assert (b, (a | bit) & b) == old[hi]  # Lemma 3.2 Q_i.
             assert_constant_on_atoms(old, upper_expr, (n, family, i, "upper"))
             assert_constant_on_atoms(forced, lower_expr, (n, family, i, "lower"))
             symbolic_shift_cases += 2
@@ -155,7 +155,7 @@ def check_forcing_distribution(n: int):
     return {"dimension": n, "exact_mass_and_ratio_checks": cases}
 
 
-def obstruction_b1():
+def obstruction_remark_3_3():
     # Coordinates are bits (b, a1, a2).
     target = tuple(int(bool(x & 6)) for x in range(8))
     h = tuple(target[x] if x & 1 else 1 for x in range(8))
@@ -203,7 +203,7 @@ def main():
         results["activation_checks"].append(check_activation_families(n))
         results["shift_checks"].append(check_shift_inequalities(n))
         results["forcing_checks"].append(check_forcing_distribution(n))
-    results["appendix_b1"] = obstruction_b1()
+    results["remark_3_3"] = obstruction_remark_3_3()
     results["external_dependency_warning"] = hatami_coefficient_warning()
     results["elapsed_seconds"] = round(perf_counter() - start, 3)
     print(json.dumps(results, indent=2))

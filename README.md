@@ -2,7 +2,12 @@
 
 Lean 4 formalization of **Bounded Relative Boundary Implies Narrow DNF
 Approximation**, by Chenghua Liu and Boning Meng
-([arXiv:2609.00240v1](https://arxiv.org/abs/2609.00240v1)).
+([arXiv:2609.00240](https://arxiv.org/abs/2609.00240)). The current formalization
+target is the STOC revised manuscript exported from the authors' Overleaf
+project on **November 6, 2026**, included as [TeX](paper/Low-Influence-Monotone-Boolean-Functions-STOC-revised.tex)
+and [PDF](paper/Low-Influence-Monotone-Boolean-Functions-STOC-revised.pdf).
+[Snapshot provenance](paper/manifest.json) identifies the exact source; it is
+not a claim that arXiv v1 contains these later editorial revisions.
 
 The main result approximates an increasing Boolean function of bounded total
 resampling influence, for `0 < p ≤ 1/2`, by a monotone DNF of width at most
@@ -14,8 +19,7 @@ argument proves Friedgut's all-bias conjecture under bounded relative boundary.
 Install [elan](https://github.com/leanprover/elan), then run:
 
 ```sh
-lake exe cache get
-lake build
+source scripts/environment.sh && lake exe cache get && lake build
 ```
 
 The toolchain is Lean **4.24.0**. Mathlib and its dependencies are pinned in
@@ -37,7 +41,11 @@ The theorem propositions are in
 proofs are in [`Paper.lean`](NarrowDNF/Paper.lean). The Hatami, Bourgain and
 compact-bias junta ingredients are proved in this repository.
 See [paper correspondence](docs/paper-correspondence.md) for the remaining
-numbered results, definitions and proof architecture.
+numbered results, definitions and proof architecture. The three headline
+statements are unchanged by this manuscript revision. The update follows the
+revised high-bias normalization and proves explicitly that Hatami's threshold
+activations are constant at uniform bias. The [synchronization report](docs/stoc2027-sync.md)
+records the comparison and the verification evidence for this revision.
 
 ## Verification
 
@@ -46,12 +54,15 @@ scripts/verify.sh
 scripts/compare.sh
 ```
 
-The first command builds every proof module, audits transitive axioms, replays
-imports with Lean's trust level zero, and runs exact finite regression checks.
+The first command checks the bundled manuscript against its manifest, builds
+every proof module, audits transitive axioms, replays imports with Lean's trust
+level zero, and runs exact finite regression checks.
 The second runs the official [Lean comparator](https://github.com/leanprover/comparator)
 on the three headline results. Its challenge has an independent, mathlib-only
 definition model; its solution imports the actual proofs. The three intentional
-challenge placeholders are excluded from the proof library. Only `propext`,
+challenge placeholders are excluded from the proof library. Separate negative
+controls test rejection of changed statements, changed referenced definitions
+and unapproved axioms. Only `propext`,
 `Classical.choice` and `Quot.sound` are permitted in proofs.
 
 See [verification instructions](docs/verification.md) for the comparator setup,

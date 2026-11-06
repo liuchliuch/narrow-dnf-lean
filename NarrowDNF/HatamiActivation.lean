@@ -8,7 +8,7 @@ import Mathlib.Tactic
 # Hatami's threshold activation family
 
 The local activations and multiplicity-counted load calculation from Appendix A
-of arXiv:2609.00240v1. The cutoff is real, as in the source. All threshold masses
+of the 2026-11-06 STOC revision. The cutoff is real, as in the source. All threshold masses
 are explicit finite sums; no activation-load guarantee is assumed.
 -/
 
@@ -38,11 +38,30 @@ theorem localMass_congr (p : ℝ) (T : Finset ι) (x y : Cube ι)
   funext i
   exact hxy i i.property
 
+omit [Fintype ι] [DecidableEq ι] in
+/-- At uniform bias, the local point mass depends only on the index-set size. -/
+theorem localMass_half (T : Finset ι) (x : Cube ι) :
+    localMass (1/2) T x = (1/2 : ℝ)^T.card := by
+  have hbit (b : Bool) : bitWeight (1/2 : ℝ) b = (1/2 : ℝ) := by
+    cases b <;> norm_num [bitWeight]
+  simp_rw [localMass, weight, hbit]
+  simp
+
 /-- Precisely the threshold activation in Appendix A, including the arity gate. -/
 def thresholdActivation (k p δ : ℝ) (retained : Finset (Finset ι))
     (m : Finset ι → ℝ) : Activation ι where
   fires T x := (T.card : ℝ) ≤ k ∧ δ * localMass p T x ≤ bMass retained m T
   locality T x y hxy := by rw [localMass_congr p T x y hxy]
+
+omit [Fintype ι] in
+/-- At `p = 1/2`, every threshold activation is constant as a function of input;
+its retained mass and its local threshold are both independent of that input. -/
+theorem thresholdActivation_half_constant (k δ : ℝ)
+    (retained : Finset (Finset ι)) (m : Finset ι → ℝ)
+    (T : Finset ι) (x y : Cube ι) :
+    (thresholdActivation k (1/2) δ retained m).fires T x ↔
+      (thresholdActivation k (1/2) δ retained m).fires T y := by
+  simp only [thresholdActivation, localMass_half]
 
 omit [Fintype ι] in
 theorem bMass_nonneg (retained : Finset (Finset ι)) (m : Finset ι → ℝ)
@@ -400,6 +419,14 @@ def paperActivation (a C p : ℝ) (f : Cube ι → Bool) : Activation ι :=
     (HatamiParameters.delta (1000*C/a))
     (HatamiParameters.epsilonOne (1000*C/a) (a/1000))
     (fun x => Influence.boolValue (f x))
+
+/-- Remark 3.3 of the revised manuscript: Hatami's own activation family is
+constant on the uniform cube, although general increasing families need not be. -/
+theorem paperActivation_half_constant (a C : ℝ) (f : Cube ι → Bool)
+    (T : Finset ι) (x y : Cube ι) :
+    (paperActivation a C (1/2) f).fires T x ↔
+      (paperActivation a C (1/2) f).fires T y :=
+  thresholdActivation_half_constant _ _ _ _ T x y
 
 /-- The explicit family is local by construction, increasing in the low-bias
 range, has the stated arity, and satisfies the exact final exponential load. -/

@@ -205,7 +205,7 @@ theorem sum_prod_two_coordinates (F : ι → Bool → Bool → ℝ) :
   simp only [Fintype.sum_prod_type]
 
 /-- Exact point masses of coordinatewise OR of two independent biased cubes.
-The second cube is the random set of forced coordinates in Lemma 3.3. -/
+The second cube is the random set of forced coordinates in Lemma 3.4. -/
 theorem forcing_mass (p : ℝ) (z : ι → Bool) :
     (∑ x : ι → Bool, ∑ d : ι → Bool,
       if (fun i => x i || d i) = z then weight p x * weight p d else 0) =
